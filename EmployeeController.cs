@@ -73,7 +73,7 @@ namespace LoginWebApp.Controllers
             return View();
         }
 
-        public IActionResult Edit(string ename)
+        public IActionResult Edit(string ename) //ád
         {
             var eList = JsonConvert.DeserializeObject<IEnumerable<Employee>>(httpClient.GetStringAsync(uri).Result);//Get All
             var emp = eList.SingleOrDefault(e=>e.EmployeeName.Equals(ename));
